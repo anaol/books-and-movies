@@ -1,0 +1,19 @@
+<div>
+  <div class="container">
+	Home
+	<h1>{{ homeCtrl.title }}</h1>
+
+	<div ng-repeat="product in homeCtrl.products" class="col-md-6"> 
+			<div class="thumbnail"> 
+				<img ng-src="{{ product.cover }}"> 
+				<p class="title">{{ product.name }}</p> 
+				<p class="price">{{ product.price | currency }}</p> 
+				<p class="date">{{ product.pubdate | date }}</p> 
+				<div class="rating">
+					<p class="likes" ng-click="homeCtrl.plusOne($index)">+ {{ product.likes }} </p>
+					<p class="dislikes" ng-click="homeCtrl.minusOne($index)">- {{ product.dislikes }} </p>
+				</div>
+			</div> 
+		</div>
+  	</div>
+</div>

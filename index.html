@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Bootstrap CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	  <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" />
+    <base href="/">
+  </head>
+  <body ng-app="myApp">
+    <div class="header">
+      <div class="container">
+        <h1>Books and Movies</h1>
+		<a ui-sref="/"> Home </a>
+		<a ui-sref="movies"> Movies </a>
+		<a ui-sref="books"> Books </a>
+		<a ui-sref="about"> About </a>
+      </div>
+    </div>
+
+    <div class="main">
+      <div ui-view></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <h2>Available for iPhone and Android.</h2>
+        <img src="http://s3.amazonaws.com/codecademy-content/projects/shutterbugg/app-store.png" width="120px" />
+        <img src="http://s3.amazonaws.com/codecademy-content/projects/shutterbugg/google-play.png" width="110px" />
+      </div>
+    </div>
+
+    <!-- Angular -->
+  	<script src="node_modules/angular/angular.js"></script>
+  	<!-- Javascript File -->
+  	<script src="./modules/app.js"></script>
+  	<!-- Angular router -->
+  	<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- Modules -->
+  	<script src="./modules/routes.js"></script>	
+    <!-- Controllers -->
+    <script src="./modules/home/controllers/homeController.js"></script>
+  	<script src="./modules/movies/controllers/moviesController.js"></script>
+  	<script src="./modules/books/controllers/booksController.js"></script>
+  	<script src="./modules/about/controllers/aboutController.js"></script>
+  </body>
+</html>
